@@ -85,13 +85,13 @@
             <!-- app buttons -->
             <ul class="app_btn">
               <li>
-                <a href="#">
+                <a href="#" onclick="showComingSoonDialog(); return false;">
                   <img class="blue_img" src="images/appstore_blue.png" alt="image">
                   <img class="white_img" src="images/appstore_white.png" alt="image">
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="app/medmaven.apk" download="medmaven.apk">
                   <img class="blue_img" src="images/googleplay_blue.png" alt="image">
                   <img class="white_img" src="images/googleplay_white.png" alt="image">
                 </a>
@@ -109,6 +109,15 @@
               <p>12M + <br> used this app</p>
             </div> -->
           </div>
+
+
+            <!-- Coming Soon Modal -->
+            <div id="comingSoonModal" class="modal" style="display: none;">
+              <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <p>Coming Soon!</p>
+              </div>
+            </div>
 
           <!-- banner slides start -->
           <div class="col-lg-6 col-md-12" data-aos="fade-in" data-aos-duration="1500">

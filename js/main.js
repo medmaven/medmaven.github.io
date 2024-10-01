@@ -15,6 +15,23 @@ $(document).ready(function() {
 )
 
 
+function showComingSoonDialog() {
+  document.getElementById("comingSoonModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("comingSoonModal").style.display = "none";
+}
+
+// Close the modal when user clicks anywhere outside of it
+window.onclick = function(event) {
+  const modal = document.getElementById("comingSoonModal");
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+}
+
+
 // All Slider Js
 
 $('#frmae_slider').owlCarousel({
@@ -307,23 +324,6 @@ $(window).scroll(function(){
       $('header').removeClass('fixed');
   }
 });
-
-
-
-
-//YOUTUBE VIDEO
-$('.play-button').click(function(e){
-  var iframeEl = $('<iframe>', { src: $(this).data('url') });
-  $('#youtubevideo').attr('src', $(this).data('url'));
-})
-
-$('#close-video').click(function(e){
-  $('#youtubevideo').attr('src', '');
-}); 
-
-$(document).on('hidden.bs.modal','#myModal', function () {
-  $('#youtubevideo').attr('src', '');
-}); 
 
 
 
